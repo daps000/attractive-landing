@@ -23,6 +23,7 @@ time, mark, audio, video {
 @color-main-darker:#dfd4be;
 @color-divider:#d8cea3;
 @color-sec: #5c5850;
+@color-sec-lighter:#a59e8c;
 @color-sec-darker: #565149;
 @font-face {
 	font-family:'lobster';
@@ -33,6 +34,17 @@ time, mark, audio, video {
 	
 }
 
+.text-shadow (@x: 0, @y: 0, @blur: 1px, @color: #000) {
+  text-shadow: @arguments;
+  -text-box-shadow: @arguments;
+  -text-box-shadow: @arguments;
+}
+.title {
+	font:lighter  2em/1em Impact, arial, sans-serif;
+	color:#fff;
+	text-transform:uppercase;
+	.text-shadow(2px, 1px, @color-sec);
+}
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
@@ -40,7 +52,7 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
 	background-color: @color-main;
-	font-family: Georgia, serif;
+	font-family: Arial, serif;
 	line-height: 1.5em;
 }
 ol, ul {
@@ -126,7 +138,7 @@ header {
 	text-align: center;
 	border-bottom: 1px solid @color-divider;
 	padding: 2em 10px 1em;
-	margin-bottom: 1em;
+	margin-bottom: 4em;
 }
 #logo-wrp {
 	position:absolute;
@@ -147,20 +159,25 @@ header {
 .contact-icons {
 	float:right;
 }
-nav li {
-	display:inline-block;
-	list-style:none;
+nav {
+	ul {
+		margin-bottom:0;
+	}
+	li {
+		display:inline-block;
+		list-style:none;
+		a {
+			display:inline-block;
+			text-indent: 100%;
+			white-space: nowrap;
+			overflow: hidden; 
+			background:url(../images/sprite.png) no-repeat 0 0;
+			width:35px;
+			height:35px;
+		}
+	}
+} 
 
-}
-nav li a {
-	display:inline-block;
-	text-indent: 100%;
-	white-space: nowrap;
-	overflow: hidden; 
-	background:url(../images/sprite.png) no-repeat 0 0;
-	width:35px;
-	height:35px;
-}
 #facebook a {
 	background-position:0 0;
 }
@@ -179,6 +196,16 @@ nav li a {
 #mail a {
 	background-position:0 -175px;
 }
+
+/*=main content */
+.grid-wrp {
+	width:100%;
+}
+.grid {
+	 margin: 0 auto;
+	 overflow:auto;
+	padding: 0 20px;
+}
 .intro {
 	font-size: 1.75em;
 	font-family: sommet-slab-1, sommet-slab-2, Georgia, serif;
@@ -186,38 +213,50 @@ nav li a {
 	max-width: none;
 }
 
-.grid {
-	overflow:auto;
-	padding: 0 20px;
-}
-
 .row {
 	margin-bottom: 1em;
 }
-
-.feature h2 {
-	font-weight: bold;
-	text-align: center;
+.main-area {
+	background:@color-sec-darker;
+	margin-top: -3em;
+    padding: 6em 0 2em;
+}
+.tweets {
+	background:@color-sec-lighter;
+	border-radius:0 0 5px 5px;
+	padding:.5em;
+}
+.features {
+	color:#fff;
+	.text-shadow(2px, 1px, @color-sec);
+	ul {
+		padding-left:20px;
+	}
+}
+.subscribe {
+	form {
+		background:@color-main;
+		padding:1em;
+		border:1px solid @color-main-darker;
+	}
+	input {
+		padding:1em;
+		border:1px solid @color-main-darker;
+		width:90%;
+		margin-bottom:0.3em;
+	}
+	input:type[checkbox] {
+		float:left;
+	}
+	label {
+		float:left;
+		font-size:.8em;
+	}
 }
 
-.feature p {
-	font-size: 1.125em;
-}
 
-.mod-download {
-	background: url(../images/bg_download.png) 0 0.75em no-repeat;
-	background-size: 100%;
-}
 
-.mod-download h2 {
-	color: #11bad3;
-	font-weight: bold;
-}
 
-.mod-download .logo {
-	color: #fff;
-	font-size: 1em;
-}
 
 a.bttn {
 	border-right: 1px solid #0087a0;
@@ -232,10 +271,6 @@ a.bttn {
 	padding: 0.5em 0.75em;
 }
 
-.mod-download .bttn:hover {
-	background: #0087a0;
-	cursor: pointer;
-}
 
 .example-grids {
 	margin-bottom: 4em;
