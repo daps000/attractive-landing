@@ -12,12 +12,25 @@
 	<link rel="stylesheet" href="./css/720_grid.css" type="text/css" media="screen and (min-width: 720px)">
 	<link rel="stylesheet" href="./css/986_grid.css" type="text/css" media="screen and (min-width: 986px)">
 	<link rel="stylesheet" href="./css/1236_grid.css" media="screen and (min-width: 1236px)" >
-
+	<!--font from google fonts-->
+	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lobster" type="text/css">
+	<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:700" type="text/css">
+	
 	<script type="text/javascript" src="js/less-1.3.0.min.js" ></script>
-	<script type="text/javascript" src="http://use.typekit.com/fti4bos.js"></script>
-	<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 </head>
 <body>
+<!-- logo centered horizontally -->
+<div id="logo-holder">
+	<div id="logo-wrp">
+		<h1 id="logo">Your product </h1>
+		<ul class="logo-border">
+			<li class="border-left"></li>
+			<li class="border-center"></li>
+			<li class="border-right"></li>
+		</ul>
+	</div>
+</div>
+<!-- header -->
 <header>
 	<div class="grid">
 		<nav class="social-icons">
@@ -27,9 +40,6 @@
 				<li id="google"><a href="#">google+</a></li>
 			</ul>
 		</nav>
-		<div id="logo-wrp">
-			<h1 id="logo">your product </h1>
-		</div>
 		<nav class="contact-icons">
 			<ul>
 				<li id="linkedin"><a href="#">linkedin</a></li>
@@ -39,11 +49,11 @@
 		</nav>
 	</div>
 </header>
-
+<!-- top page with video and intro -->
 <div class="grid">
 	<div class="row">
 		<div class="slot-0-1-2">
-			<iframe src="http://player.vimeo.com/video/2328091?title=0&amp;byline=0&amp;portrait=0" width="588" height="302" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+			<iframe src="http://player.vimeo.com/video/2328091?title=0&amp;byline=0&amp;portrait=0" width="100%" height="302" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
 		</div>
 		<div class="slot-3-4-5 signin">
 			<h1>No need to be a superstar to boost your conversions! </h1>
@@ -54,11 +64,12 @@
 		</div>
 	</div>
 </div>
-
+<!-- area with twitter, features and subscribe form -->
 <section class="grid-wrp main-area">
 	<div class="grid row">
-		<div class="slot-0-1">
-			<h2 class="title t-tweets">Latest tweets</h2>
+		<div class="slot-0-1 tweets-wrp">
+			<span class="birdie"></span>
+			<h2 class="title">Latest tweets</h2>
 			<div class="tweets">tweets goes here</div>
 		</div>
 		<div class="slot-2-3 features">
@@ -76,212 +87,57 @@
 				<fieldset>
 					<input type="text" placeholder="Your name" name="name" />
 					<input type="text" placeholder="Email address" name="email" />
-					<input type="checkbox" name="terms" /><label for="terms">I accept the tems and conditions</label>
-					<input type="submit" value="Submit" />
+					<p><input type="checkbox" name="terms" checked="checked" /><label for="terms">I accept the tems and conditions</label></p>
+					<input type="submit" value="SUBMIT" />
 				</fieldset>
 			</form>
 		</div>
 	</div>
 </section>
-
-<div class="grid">	
-	<div class="example-grids">
-		<h2>Basic 6-Column Grid Slots</h2>
-		<p>Slots 0-5 represent the 6-column grid. These slots can be combined to create a 3-column grid too.</p>
-		<div class="row">
-			<div class="slot-0"> 
-				<p> 
-					.slot-0
-				</p> 
+<!-- concluding area-->
+<div class="grid sec-area">	
+	<div class="row">
+		<div class="slot-0-1 gmaps"> 
+			<div> 
+				google maps
 			</div> 
-	 
-			<div class="slot-1"> 
-				<p> 
-					.slot-1
-				</p> 
-			</div> 
-
-			<div class="slot-2"> 
-				<p> 
-					.slot-2
-				</p> 
-			</div> 
-	 
-			<div class="slot-3"> 
-				<p> 
-					.slot-3
-				</p> 
-			</div> 
-
-			<div class="slot-4"> 
-				<p> 
-					.slot-4
-				</p> 
-			</div> 
-	 
-			<div class="slot-5"> 
-				<p> 
-					.slot-5
-				</p> 
-			</div> 
-		</div><!-- / .row -->
-		
-		<h2>Basic 4-Column Grid Slots</h2>
-		<p>Slots 6-9 represent the 4-column grid.
-		<div class="row">
-			<div class="slot-6"> 
-				<p> 
-					.slot-6
-				</p> 
-			</div> 
-	 
-			<div class="slot-7"> 
-				<p> 
-					.slot-7
-				</p> 
-			</div> 
-	 
-			<div class="slot-8"> 
-				<p> 
-					.slot-8
-				</p> 
-			</div> 
-
-			<div class="slot-9"> 
-				<p> 
-					.slot-9
-				</p> 
-			</div> 
-		</div><!-- /.row -->
-
-		<h2>Combining Slots to Create Super Slots</h2>
-		<p>Combining slots is as simple as connecting their slot numbers with dashes.</p>
-		<div class="row">
-			<div class="slot-0"> 
-				<p> 
-					.slot-0
-				</p> 
-			</div> 
-	 
-			<div class="slot-1-2"> 
-				<p> 
-					.slot-1-2
-				</p> 
-			</div> 
-	 
-			<div class="slot-3-4-5"> 
-				<p> 
-					.slot-3-4-5
-				</p> 
-			</div> 
-		</div><!-- /.row -->
-		
-		<h2>Using Both 4- &amp; 6-Column Slots In a Row</h2>
-		<p>In some situations, you might want to combine the 4- &amp; 6-column grids in a single row. Just use the slot numbers that best represent each slots position in that row.</p>
-		<div class="row">
-			<div class="slot-0"> 
-				<p> 
-					.slot-0
-				</p> 
-			</div> 
-	 
-			<div class="slot-7"> 
-				<p> 
-					.slot-7
-				</p> 
-			</div> 
-
-			<div class="slot-8"> 
-				<p> 
-					.slot-8
-				</p> 
-			</div> 
-			
-			<div class="slot-4-5"> 
-				<p> 
-					.slot-4-5
-				</p> 
-			</div> 
-		</div><!-- /.row -->
-
-		<h2>Nesting Slots &amp; Rows</h2>
-		<p>Just add <code>.row</code>s within <code>.row</code>s, and then assemble the slots in each row as per usual.</p>
-		<div class="row">
-			<div class="slot-0"> 
-				<p> 
-					.slot-0
-				</p> 
-			</div> 
-			<!-- end .slot-0 -->
-		
-			<div class="slot-1-2-3"> 
-				<p> 
-					.slot-1-2-3
-				</p>
-				<div class="row">
-					<div class="slot-1">
-						<p>
-							.slot-1
-						</p>
-						<div class="row">
-							<div class="slot-1">
-								<p>
-									.slot-1
-								</p>
-							</div>
-						</div>
-					</div>
-					<div class="slot-2-3">
-						<p>
-							.slot-2-3
-						</p>
-						<div class="row">
-							<div class="slot-2">
-								<p>
-									.slot-2
-								</p>
-							</div>
-							<div class="slot-3">
-								<p>
-									.slot-3
-								</p>
-							</div>
-						</div>
-						<div class="row">
-							<div class="slot-2-3">
-								<p>
-									.slot-2-3
-								</p>
-							</div>
-						</div>
-					</div>
+		</div> 
+ 
+		<div class="slot-2-3"> 
+			<h2 class="title-sec">About us</h2>
+			<div  class="vcard">
+				<span class="fn n given-name">Quick info about your company.</span>
+				
+				<div class="adr">
+					<div class="street-address">Your address here</div>
+					<span class="postal-code">0000</span>
+					<span class="locality">City</span>
+					<div class="tel" href="tel:+111111111">Phone:+111111111</div>
+					<div class="fax">Fax:111111111</div>
 				</div>
+				<a class="email" href="mailto:email@test.com">email@test.com</a>
 			</div> 
-			<!-- end .slot-1-2-3 -->
+		</div>
 
-			<div class="slot-4-5"> 
-				<p> 
-					.slot-4-5
-				</p>
-				<div class="row">
-					<div class="slot-4">
-						<p>
-							.slot-4
-						</p>
-					</div>
-					<div class="slot-5">
-						<p>
-							.slot-5
-						</p>
-					</div>
-				</div>
-			</div> 
-			<!-- end .slot-5 -->	
-		</div><!-- /.row -->
-	</div><!-- / .example-grids -->
-	<footer class="row">
-		<p>&copy; <a href="http://conor.cc">Conor Muirhead</a></p>
-	</footer>
-</div><!-- / .grid -->
+		<div class="slot-4-5 donation"> 
+			<p>Make a donation via paypal<br />
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+				Sed rhoncus, purus lobortis aliquet vehicula, risus purus facilisis ligula, nec ultrices sem neque id est. Etiam turpis nunc, tincidunt nec facilisis vitae, blandit id orci. Etiam a lacinia augue. 
+			</p> 
+			<img src="images/donations.png" alt="Donate to paypal" />
+		</div> 
+ 
+	</div>
+</div>
+<footer>
+	<div class="grid">
+		<ul>
+			<li><a href="#">Link 1</a></li>
+			<li><a href="#">Link 2</a></li>
+			<li><a href="#">Link 3</a></li>
+		</ul>
+		<p>Copyright &copy;Your Company 2012</p>
+	</div>
+</footer>
 </body> 
 </html>
